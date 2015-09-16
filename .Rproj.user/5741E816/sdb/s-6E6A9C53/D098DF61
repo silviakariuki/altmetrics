@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"Trial Report\"\nauthor: \"Silvia Kariuki\"\ndate: \"September 15, 2015\"\noutput: html_document\n---\n\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\n```{r car_summary}\nsummary(cars)\n```\n\nYou can also embed plots, for example:\n\n```{r, echo = FALSE}\nplot(cars)\n```\n\nNote that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.\n\nWhat are the dimensions of **cars**?\nThe number of cars is `r dim(cars)[1]`.\n```{r, include = FALSE}\ndim(cars)\n```\n\n",
+    "created" : 1442331964057.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1046724719",
+    "id" : "D098DF61",
+    "lastKnownWriteTime" : 1442332821,
+    "path" : "~/altmetrics/Trial Report.Rmd",
+    "project_path" : "Trial Report.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

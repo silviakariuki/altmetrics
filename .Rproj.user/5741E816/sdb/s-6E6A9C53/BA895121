@@ -1,0 +1,17 @@
+{
+    "contents" : "counts_raw <- read.delim(\"data/counts-raw.txt.gz\")\ndim(counts_raw)\nhead(counts_raw)\ntail(counts_raw)\ncounts_raw[1, 10]\ncounts_raw[1:3, 10:12]\ncounts_raw[1:3,]\ncounts_raw[1:10, \"pmid\"]\nstr(counts_raw$daysSincePublished)\nhead(counts_raw$daysSincePublished / 7)\nis.numeric(counts_raw$daysSincePublished)\nstr(counts_raw$journal)\nlevels(counts_raw$journal)\nread.table(stringsAsFactors = F)\ncounts_raw$authorsCount[1:10]\nis.na(counts_raw$authorsCount[1:10])\nanyNA(counts_raw$authorsCount[1:10])\n\nsummary(counts_raw$wosCountThru2011)\nmean(counts_raw$wosCountThru2011)\nhist(counts_raw$wosCountThru2011)\nhist(sqrt(counts_raw$wosCountThru2011))\nplot(counts_raw$daysSincePublished, counts_raw$wosCountThru2011)\n\ncounts_raw$authorsCount[1:10] > 7\ncounts_raw$authorsCount[1:10]\ndim(counts_raw[counts_raw$journal == \"pone\", ])\ndim(counts_raw[counts_raw$journal != \"pone\", ])\ndim(counts_raw[counts_raw$journal %in% c(\"pone\", \"pbio\", \"pgen\"), ])\nhead(counts_raw$plosSubjectTags)\ndim(counts_raw[grepl(\"Immunology\", counts_raw$plosSubjectTags), ])\n\nif(anyNA(counts_raw$authorsCount)) {\n  print(\"Be careful\")\n} else {\n  print(\"Looking good!\")\n}\n\nif(anyNA(c(1,1,1))) {\n  print(\"Be careful\")\n} else {\n  print(\"Looking good!\")\n}\n\nfor (i in 1:10) {\n  print(i)\n}\n\nfor (i in c(\"cat\", \"dog\", \"mouse\")) {\n  print(\"cat\")\n}\n\nx <- numeric()\nfor (i in 1:length(counts_raw$wosCountThru2011)) {\n  x <- c(x, counts_raw$wosCountThru2011[i] + 1)\n}\n\nx <- numeric(length = length(counts_raw$wosCountThru2011))\nfor (i in 1:length(counts_raw$wosCountThru2011)) {\n  x[i] <- counts_raw$wosCountThru2011[i] + 1\n}\n\nlevels(counts_raw$journal)\nresults <- numeric(length = length(levels(counts_raw$journal)))\nnames(results) <- levels(counts_raw$journal)\nresults[\"pone\"]\n\nfor (j in levels(counts_raw$journal)) {\n  results[j] <- mean(counts_raw$wosCountThru2011[counts_raw$journal == j])\n}\n\n\n\n\n\n",
+    "created" : 1442326890747.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "217529359",
+    "id" : "BA895121",
+    "lastKnownWriteTime" : 1442336614,
+    "path" : "~/altmetrics/r-review.R",
+    "project_path" : "r-review.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
